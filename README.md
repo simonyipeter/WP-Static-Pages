@@ -9,6 +9,9 @@ Generate Static HTML files from pages, so the these pages will be 10x faster tha
 - Open any page for edit, check the ‘Static Page’ checkbox and Update/Publish
 - Check the Setting > WP Static Pages for additional features.
 
+# Buy Premium
+[WP Static Pages Premium](https://wpsp.prs.hosting/termek/wp-static-pages-premium-plugin/)
+
 # Screenshots:
 ![1](https://wpsp.prs.hosting/wp-content/uploads/2018/05/Screenshot_2.jpg)
 ![1](https://wpsp.prs.hosting/wp-content/uploads/2018/05/screenshot-1.jpg)
