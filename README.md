@@ -1,18 +1,18 @@
 # WP-Static-Pages
 Generate Static HTML files from pages, so the these pages will be 10x faster than non-statics. This plugin supports posts, categories and products also. The HTML files are updated each time the update or publish button is pressed.
 
-#Installation:
+# Installation:
 
-- Clone this repository
-– Upload Plugin button, browse the plugin file and Install Now
-– Activate WP Static Pages Premium from your Plugins page.
-– Open any page for edit, check the ‘Static Page’ checkbox and Update/Publish
-– Check the Setting > WP Static Pages for additional features.
+-Clone this repository
+–Upload Plugin button, browse the plugin file and Install Now
+–Activate WP Static Pages Premium from your Plugins page.
+–Open any page for edit, check the ‘Static Page’ checkbox and Update/Publish
+–Check the Setting > WP Static Pages for additional features.
 
-#Screenshots:
+# Screenshots:
 
 
-#Frequently Asked Questions
+# Frequently Asked Questions
 
 Why better this plugin than other?
 
