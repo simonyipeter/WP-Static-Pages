@@ -3,7 +3,7 @@ Generate Static HTML files from pages, so the these pages will be 10x faster tha
 
 # Installation:
 
-- Clone this repository
+- Download in ZIP this repository
 - Upload Plugin button, browse the plugin file and Install Now
 - Activate WP Static Pages from your Plugins page.
 - Open any page for edit, check the ‘Static Page’ checkbox and Update/Publish
