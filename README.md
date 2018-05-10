@@ -26,9 +26,9 @@ Other plugins only cache from the second request, with this plugin every request
 Which plugin is compatible with WP Static Pages plugin?
 
 Compatible:
-– Contact form 7
-– Woocommerce
-– Ninja Form
+- Contact form 7
+- Woocommerce
+- Ninja Form
 
 Incompatible:
-– Booking Calendar form
+- Booking Calendar form
