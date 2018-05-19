@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name:  WP Static Pages
-Description:  Generate Static HTML files from pages, so the these sites will be 10x faster than non-static. This plugin supports posts, categories and products also. The HTML files are updated each time the update or publish button is pressed. 
+Description:  Generate Static HTML files from pages, so these sites will be 10x faster than non-static. This plugin supports posts, categories and products also. The HTML files are updated each time the update or publish button is pressed. 
 Author:       Peter Simonyi
-Version:      0.9.3
+Version:      0.9.4
 Author URI:	  https://www.facebook.com/simonyi.peter
 */
 
-$wpsp_register_string="<a href='https://wpsp.prs.hosting/termek/wp-static-pages-premium-plugin/' target='_blank'>Please, buy the premium plugin to use this feature!</a>";
+$wpsp_register_string="<a href='https://wpsp.prs.hosting/product/wp-static-pages-premium-plugin/' target='_blank'>Please, buy the premium plugin to use this feature!</a>";
 
 function WPSP_pluginLinks($links) {
 	$settings_link = '<a href="options-general.php?page=wpsp">Settings</a>'; 
@@ -80,8 +80,7 @@ RewriteRule ^index\.php$ - [L]
 
 #All Post redirect to index.php except /wp-admin/
 RewriteCond %{REQUEST_METHOD} POST
-RewriteCond %{REQUEST_URI} !^/wp-admin/
-RewriteCond %{REQUEST_URI} !^/wp-login
+RewriteCond %{REQUEST_URI} !^(/wp-admin|/wp-login|/wp-cron|/wp-activate|/wp-mail|/wp-signup|/wp-mail|/wp-comments-post)
 RewriteRule . /index.php [L]
 
 #Handle Ajax requests
@@ -101,7 +100,7 @@ RewriteRule . /index.php [L]
 		$start=strpos($file_data,'#BEGIN WPSP');
 		$stop=strpos($file_data,'#END WPSP');
 		error_log("WPSP: ".$start.':'.$stop, 0);
-		file_put_contents($doc_root.'.htaccess', substr_replace($file_data, '', $start, $stop+7));
+		file_put_contents($doc_root.'.htaccess', substr_replace($file_data, '', $start, $stop+8));
 	}
 }
 
@@ -139,6 +138,7 @@ function wpsp_activation() {
 }
 register_activation_hook( __FILE__, 'wpsp_activation' );
 
+
 function wpsp_post_checkbox(){
         $html  = '<div id="major-publishing-actions" style="overflow:hidden">';
         $html .= '<div id="publishing-action">';
@@ -152,8 +152,6 @@ function wpsp_post_checkbox(){
         echo $html;
 }
 add_action( 'post_submitbox_misc_actions', 'wpsp_post_checkbox' );
-
-
 
 function wpsp_save_state( $post_id ) {
 	// Checks save status
@@ -313,7 +311,7 @@ function wpsp_options_page_html()
             ?>
         </form>
 		
-		<h1>Only in <a href='https://wpsp.prs.hosting/termek/wp-static-pages-premium-plugin/' target='_blank'>Premium:</a></h1>
+		<h1>Only in <a href='https://wpsp.prs.hosting/product/wp-static-pages-premium-plugin/' target='_blank'>Premium:</a></h1>
 		<form action="options-general.php?page=wpsp" method="post">
 			<p>Enable the static page option for all pages, posts and categories: <input type="checkbox" name="all_content" value="1" /><br/>
 			Be careful to use this feature! Always check the results!</p>
