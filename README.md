@@ -21,7 +21,7 @@ Generate Static HTML files from pages, so the these pages will be 10x faster tha
 
 Why better this plugin than other?
 
-Other plugins only cache from the second request, with this plugin every requests served from cache, include first. This is very important for SEO optimization.
+Other plugins only cache from the second request, with this plugin every requests will serve from cache, include first. This is very important for SEO optimization.
 
 Which plugin is compatible with WP Static Pages plugin?
 
